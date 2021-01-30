@@ -71,9 +71,11 @@ def calc_temperature():
 
     if str(T_Box_Input_1) == "Celsius" and str(T_Box_Input_2) == "Fahrenheit":
         Temp_Label = int(T_Entry_Input) * 9 / 5 + 32
+        Temp_Label = round(Temp_Label, 2)
         Temp_Label = str(Temp_Label) + " °F"
     elif str(T_Box_Input_1) == "Celsius" and str(T_Box_Input_2) == "Celsius":
         Temp_Label = int(T_Entry_Input)
+        Temp_Label = round(Temp_Label, 2)
         Temp_Label = str(Temp_Label) + " °C"
     elif str(T_Box_Input_1) == "Fahrenheit" and str(T_Box_Input_2) == "Celsius":
         Temp_Label = int(T_Entry_Input) - 32
@@ -82,6 +84,7 @@ def calc_temperature():
         Temp_Label = str(Temp_Label) + " °C"
     elif str(T_Box_Input_1) == "Fahrenheit" and str(T_Box_Input_2) == "Fahrenheit":
         Temp_Label = int(T_Entry_Input)
+        Temp_Label = round(Temp_Label, 2)
         Temp_Label = str(Temp_Label) + " °F"
 
     #  Creating Label
